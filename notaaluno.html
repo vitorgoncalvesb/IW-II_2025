@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nota aluno</title>
     <script>
-
-        let nota = parseFloat(prompt("Digite a nota do aluno:"));
-        
-        if(nota > 10){
-            alert("Digite uma nota menor que 10.")
-        }else if(nota < 0){
-            alert("Digite uma nota maior que zero.")
-        }else{
-            if (nota >= 7) {
-            alert("Aprovado ✅");
-            } else if (nota >= 5 && nota < 7) {
-                alert("Recuperação ⚠️");
+        let nota = prompt("Digite a nota do aluno:");
+        if (isNaN(nota)) {
+            alert("Digite um número válido.");
+        } else {
+            nota = parseFloat(nota);
+            if (nota > 10) {
+                alert("Digite uma nota menor que 10.");
+            } else if (nota < 0) {
+                alert("Digite uma nota maior que zero.");
             } else {
-                alert("Reprovado ❌");
+                if (nota >= 7) {
+                    alert("Aprovado ✅");
+                } else if (nota >= 5 && nota < 7) {
+                    alert("Recuperação ⚠️");
+                } else {
+                    alert("Reprovado ❌");
+                }
+            }
         }
-        }
-        
-        </script>
+    </script>
 </head>
 <body>
-    
+
 </body>
 </html>
-

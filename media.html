@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function exibirMenu() {
+        return prompt(
+            "===== MENU INTERATIVO =====\n" +
+            "1 - Calcular média\n" +
+            "2 - Sair\n" +
+            "Escolha uma opção:"
+        );
+    }
+
+    function calcularMedia(nota1, nota2) {
+        return (nota1 + nota2) / 2;
+    }
+
+    function exibirResultado(media) {
+        if (media >= 7) {
+            return "Aprovado ✅";
+        } else if (media >= 5) {
+            return "Recuperação ⚠️";
+        } else {
+            return "Reprovado ❌";
+        }
+    }
+
+    function executarOpcao(opcao) {
+        switch (opcao) {
+            case "1":
+                let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+                let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+                if (isNaN(nota1) || isNaN(nota2)) {
+                    alert("Erro: Digite notas válidas.");
+                } else {
+                    let media = calcularMedia(nota1, nota2);
+                    let resultado = exibirResultado(media);
+                    alert(`Média: ${media.toFixed(2)} - ${resultado}`);
+                }
+                break;
+            case "2":
+                alert("Saindo... Até mais!");
+                return false;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+        return true; 
+    }
+
+    function iniciarMenu() {
+        let continuar = true;
+        while (continuar) {
+            let opcao = exibirMenu();
+            continuar = executarOpcao(opcao);
+        }
+    }
+
+    iniciarMenu();
+</script>
+</body>
+</html>
