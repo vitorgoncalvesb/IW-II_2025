@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 2</title>
+</head>
+<body>
+  <script>
+      function verificarIdade() {
+    const idade = prompt("Por favor, insira sua idade:");
+    const idadeInteira = parseInt(idade);
+
+    if (!isNaN(idadeInteira)) {
+      if (idadeInteira >= 18) {
+        alert("Você é um adulto.");
+      } else {
+        alert("Você é menor de idade.");
+      }
+    } else {
+      alert("Por favor insira sua idade usando números.");
+    }
+  }
+
+  verificarIdade()
+  
+  </script>
+</body>
+</html>

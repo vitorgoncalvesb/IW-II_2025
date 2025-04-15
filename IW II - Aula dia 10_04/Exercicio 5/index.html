@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 3</title>
+</head>
+<body>
+  <script>
+    function tabelaDeMultiplicacao() {
+    const numero = prompt("Por favor, insira um número para ver sua tabuada:");
+    const numeroInteiro = parseInt(numero);
+
+    if (!isNaN(numeroInteiro)) {
+      console.log("Tabuada de multiplicação do " + numeroInteiro + ":");
+      for (let i = 1; i <= 10; i++) {
+        const resultado = numeroInteiro * i;
+        console.log(numeroInteiro + " x " + i + " = " + resultado);
+      }
+      alert("Resultado no console, aperte F11 para ver!")
+    } else {
+      alert("Por favor insira um número.");
+    }
+  }
+
+  tabelaDeMultiplicacao()
+  </script>
+</body>
+</html>

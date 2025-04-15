@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 1</title>
+</head>
+<body>
+  <script>
+    function parOuImpar() {
+  const numero = prompt("Por favor, insira um número:");
+  const numeroInteiro = parseInt(numero);
+
+  if (!isNaN(numeroInteiro)) {
+      if (numeroInteiro % 2 === 0) {
+        alert(numeroInteiro + " é um número par.");
+      } else {
+        alert(numeroInteiro + " é um número ímpar.");
+      }
+    } else {
+      alert("Por favor insira um número.");
+    }
+  }
+
+  parOuImpar()
+  </script>
+</body>
+</html>
