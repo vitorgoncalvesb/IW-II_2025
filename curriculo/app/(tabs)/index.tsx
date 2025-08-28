@@ -1,40 +1,37 @@
-import { Link } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
+import Button from '@/app-example/components/Button';
+import ImageViewer from '@/app-example/components/ImageViewer';
+
+const PlaceholderImage = require("@/assets/images/background-image.jpg");
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Felipe e Vitor Gonçalves</Text>
-      <Link href="/about" style={styles.button}>
-        Vá para pagina About
-      </Link>
-      <Link href="/pagina1" style={styles.button}>
-        Vá para a Pagina 1
-      </Link>
-      <Link href="/pagina2" style={styles.button}>
-        Vá para a Pagina 2
-      </Link>
-
+      <View style={styles.imageContainer}>
+        <ImageViewer imgSource={PlaceholderImage} />
+      </View>
+      <View style={styles.footerContainer}>
+        <Button theme="primary" label="Choose a photo" />
+        <Button theme="primary" label="Use this photo" />
+      </View>
     </View>
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0073ffff',
+    backgroundColor: '#25292e',
     alignItems: 'center',
-    justifyContent: 'center',
   },
-  text: {
-    color: '#fff',
-    marginBottom: 20,
-    fontSize: 100
+  imageContainer: {
+    flex: 1,
+    paddingTop: 28,
   },
-  button: {
-    fontSize: 20,
-    textDecorationLine: 'underline',
-    color: '#272121ff',
-    marginVertical: 10,
+  footerContainer: {
+    flex: 1 / 3,
+    alignItems: 'center',
   },
 });
